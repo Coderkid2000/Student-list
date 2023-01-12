@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>All of my students in a list.
+    </title>
+
+</head>
+
+<body>
+
+    <center>
+
+        <h1>Lists of students</h1>
+
+        <div>1. <input type="text" id="Name1" placeholder="Student 1"></div>
+        <br>
+        <div>2. <input type="text" id="Name2" placeholder="Student 2"></div>
+        <br>
+        <div>3. <input type="text" id="Name3" placeholder="Student 3"></div>
+        <br>
+        <div>4. <input type="text" id="Name4" placeholder="Student 4"></div>
+        <br>
+        <button onclick="submit()">Submit</button>
+        <br>
+        <br>
+        <div id="result"></div>
+        <script>
+            var array_of_student = [];
+
+            function submit() {
+                var name1 = document.getElementById("Name1").value;
+                var name2 = document.getElementById("Name2").value;
+                var name3 = document.getElementById("Name3").value;
+                var name4 = document.getElementById("Name4").value;
+
+                array_of_student.push(name1);
+                array_of_student.push(name2);
+                array_of_student.push(name3);
+                array_of_student.push(name4);
+                console.log(array_of_student);
+                array_of_student.sort();
+                document.getElementById("result").innerHTML = array_of_student;
+
+            }
+        </script>
+    </center>
+</body>
+
+</html>
